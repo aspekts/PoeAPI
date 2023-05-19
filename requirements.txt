@@ -1,0 +1,3 @@
+fastapi==0.95.1
+requests==2.28.1
+uvicorn==0.22.0

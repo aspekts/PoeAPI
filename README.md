@@ -24,7 +24,7 @@ git clone https://github.com/aspekts/PoeAPI.git
 - Install dependencies
 
 ```bash
-pip install requests uvicorn fastapi
+pip install -r requirements.txt
 ```
 
 - Run the API
@@ -45,7 +45,7 @@ curl localhost:8000
 ngrok http 8000
 ```
 
-Access that URL in your browser to confirm it works. This is your bot server URL.
+Access the url given, in your browser to confirm it works. This is your bot server URL.
 </details>
 
 ### Example
