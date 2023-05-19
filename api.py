@@ -67,11 +67,11 @@ class Item(BaseModel):
         }
     )
 
-async def chat(options: Item):
+async def chat(bot:str, options: Item):
     """
     This is a Python function that allows users to select and chat with a bot from Poe.com.
     """
-    if options.bot not in bots:
+    if bot not in bots:
         return JSONResponse(status_code=400, content={"message" : "Bad Request", "details":"The bot you selected is not available. Please choose one of the following bots: capybara, a2, chinchilla", "status":"error"})
     if options.cookie is None or options.formkey is None:
         return JSONResponse(status_code=400, content={"message" : "Bad Request", "details":"At least one of the headers is not provided. Please ensure both the formkey and cookie headers are set.", "status":"error"})
