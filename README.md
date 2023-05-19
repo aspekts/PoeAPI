@@ -50,7 +50,7 @@ Access the url given, in your browser to confirm it works. This is your bot serv
 
 ### Example
 ```bash
-curl http://127.0.0.1/chat/capybara -H "Cookie: m-b=xxxx" -H "formkey: xxxxx" -d '{"message":"What is the meaning of life?"}'
+curl http://127.0.0.1/chat/capybara -d '{"Cookie: m-b=xxxx" , "formkey: xxxxx", "message":"What is the meaning of life?"}'
 ```
 Response:
 ```json
