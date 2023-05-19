@@ -20,7 +20,7 @@ class Item(BaseModel):
     cookie: str
     formkey: str
 
-@app.get(
+@app.post(
     "/chat/{bot}",
     response_model=Item,
     summary="Chat",
