@@ -83,7 +83,8 @@ async def chat(bot:str, options: Item):
         send_message(options.message,options.bot,chat_id)
         reply = get_latest_message(options.bot)
         return JSONResponse(status_code=200, content={"message" : reply, "status":"success", "chat_id":chat_id })
-    except:
+    except Exception as e:
+        print(e)
         return JSONResponse(status_code=500, content={"message" : "Internal Server Error", "status":"error"})
 
 @app.get("/")
