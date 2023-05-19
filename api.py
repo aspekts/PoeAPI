@@ -17,8 +17,8 @@ bots =['capybara','a2','chinchilla']
 class Item(BaseModel):
     bot: str
     message: str
-    cookie: Annotated[str | None, Header()] = None
-    formkey: Annotated[str | None, Header()] = None
+    cookie: str
+    formkey: str
 
 @app.get(
     "/chat/{bot}",
